@@ -1,0 +1,33 @@
+Common Responsive Patterns
+
+Column drop pattern: at narrowest, objects single column; as width expands, objects become
+multi-columns across
+
+Mostly fluid pattern: stacked pattern at narrowest viewport; similar to column drop as width expands, but adds margins at the widest
+
+see pattern-mostly-fluid-quiz!
+
+Layout shifter: design the order!
+	containers within containers!
+	negative orders are possible
+
+Off Canvas: put less frequently used off screen
+	ideal for navigation menus
+	<nav id='drawer'></nav>
+	
+
+	<!-- nav bar slides in from left from offscreen, covers content -->
+	nav{
+		width: 300px;
+		height: 100%;
+		position: absolute;
+		-webkit-transform: translate(-300px, 0);
+		transform: translate(-300px, 0);
+		transition: 0.3s ease;
+}
+
+	nav.open{
+		-webkit-transform: translate(0,0);
+		transform: translate(0,0);
+}
+
